@@ -51,9 +51,9 @@ class ModuleTwo extends React.Component {
                     
                     <Link to="/ModuleTwo"
                         onClick={() => this.LeftClick()} 
-                        class="">
+                        className="">
                               <h2 className="ModuleTwo_SubTitle">       
-                    <i class="material-icons icons-cargar">autorenew</i>
+                    <i className="material-icons icons-cargar">autorenew</i>
                         {this.props.ModuleTwo.TextOne} </h2>
                     </Link>
                     <span>
@@ -80,7 +80,7 @@ class ModuleTwo extends React.Component {
                  <Link to="/ModuleTwo"
                         onClick={() => this.RightClick()}>
                         <h2 className="ModuleTwo_SubTitle">{this.props.ModuleTwo.TextTwo}
-                            <i class="material-icons icons-cargar">autorenew</i>
+                            <i className="material-icons icons-cargar">autorenew</i>
                         </h2>
                 </Link>
                     <span>
