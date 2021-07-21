@@ -1,0 +1,278 @@
+@import "variables";
+
+.ThreeOne-content{
+    position: relative;
+}
+.ThreeOne-title{
+    color: $colorTitle;
+    opacity: 1;
+    font-style: inherit;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+
+.ThreeOne_body-subtitle{
+    color: $colorTitle;
+    opacity: 1;
+    font-size: 20px;
+    margin: 10px;
+}
+.btn-threeNext{
+    position: absolute; 
+    left: 75%;
+    top: 80%;
+    margin: 2px;
+    width: 15%;
+    border-radius: 50%;
+    background-color: rgba(30,187,23,1);
+    box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
+     -webkit-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
+     -moz-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
+     animation-name: pulse;
+     animation-duration: 6s;
+     animation-iteration-count: infinite;
+ }
+
+ .btn-threeback{
+    position: absolute; 
+    right: 75%;
+    top: 80%;
+    margin: 2px;
+    width: 15%;
+    border-radius: 50%;
+    background-color: rgba(30,187,23,1);
+    box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
+     -webkit-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
+     -moz-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
+     animation-name: pulse;
+     animation-duration: 6s;
+     animation-iteration-count: infinite;  
+ }
+ .btn-three:hover{
+     transform: scale(0.8);
+     background-color: rgba(30,187,23,1);
+ 
+  }  
+
+  .BadgesThree_body-title{
+    background: rgb(49,125,39);
+    background: radial-gradient(circle, rgba(49,125,39,1) 0%, rgba(30,187,23,1) 76%);        position: absolute;
+    animation-name: backInRight;
+    animation-duration: 1s;
+  }
+  .ThreeOne_img{
+    animation-name: pulse;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.BadgesTree_body-left{
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+.BadgesTree_body-right{
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+
+.BadgesThree_body-content{
+    border-radius: 65px 0px 65px 0px;
+    z-index: 2;
+    border-style: dashed;
+    border-width: 3px;
+    border-color: green;
+    transform-style: preserve-3d;
+    background-color: rgba(193, 219, 193, 0.89);
+    position: absolute;
+    animation-name: flipInY;
+    animation-duration: 1s;
+
+}
+
+@media (min-width: 600px) {
+    .BadgesThree_body{
+        margin: 15px;
+        width: 1000px;
+        height: 550px;
+        justify-content:center;
+        text-align:center;
+        display: flex;   
+        box-shadow: 1px -1px 5px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 1px -1px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 1px -1px 5px 0px rgba(0,0,0,0.75);
+        background: url('../img/business.jpg') center ; 
+        background-size: auto 100%;
+        background-repeat: no-repeat; 
+        position: absolute;
+    }
+
+    .BadgesThree_body-title{
+        right: 1%;
+        top: 10%;
+        padding: 6px;
+        padding-right: 160px;
+        padding-left: 50px;
+        border-radius: 60px;
+    }
+
+    .BadgesThree_body-text{
+        font-size: 20px;
+        font-family: $fontTitle;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        
+    }
+
+.BadgesTree_body-left{
+    background-color: green;
+    width: 120px;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    top: 0%;
+    border-radius:0% 100% 100% 0% / 78% 85% 15% 22%     ;
+}
+.BadgesTree_body-right{
+    background-color: green;
+    width: 120px;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    top: 0%;
+    border-radius: 100% 0% 44% 56% / 24% 100% 0% 76% ;
+}
+.ThreeOne_background{
+    visibility: hidden;
+    width: 0%;
+    height: 0%;
+}
+
+
+/* contenido del recuadro */
+.BadgesThree_body-content{
+    width: 40%;
+    height: 250px;
+    left: 30%;
+    top: 28%;
+    opacity: 0.9;
+
+}
+
+.ThreeOne_img{
+    position: absolute;
+    width: 20%;
+    z-index: 1;
+    left: 40%;
+    top: -25%;
+}
+.BadgeTree_footer{
+    width: 20%;
+    height: 10%;
+    background-color: rgb(10, 117, 33);
+    z-index: 100;
+    position: absolute;
+    border-radius: 20px;
+    top: 75%;
+    left: 40%;
+}
+.BadgeTree_footer{
+    width: 20%;
+    height: 10%;
+    background-color: rgb(10, 117, 33);
+    z-index: 100;
+    position: absolute;
+    border-radius: 20px;
+    top: 75%;
+    left: 40%;
+}
+
+}
+@media (max-width: 600px) {
+    .BadgesThree_body{
+        width: 100%;
+        height: 650px;
+        justify-content:center;
+        text-align:center;
+        display: flex;   
+    }
+    .BadgesThree_body-title{
+        background: rgb(49,125,39);
+        background: radial-gradient(circle, rgba(49,125,39,1) 0%, rgba(30,187,23,1) 76%);        position: absolute;
+        margin: 5%;
+        padding: 5%;
+        border-radius: 60px;
+        z-index: 1;
+    }
+    .BadgesThree_body-text{
+        font-size: 20px;
+        font-family: $fontTitle;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .BadgesTree_body-left{
+        background-color: rgba(0, 128, 0, 0.842);
+        width: 50px;
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        top: 0%;
+        border-radius:0% 100% 100% 0% / 78% 85% 15% 22%     ;
+    }
+    .BadgesTree_body-right{
+        background-color: rgba(0, 128, 0, 0.842);;
+        width: 50px;
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
+        top: 0%;
+        border-radius: 100% 0% 0% 100% / 21% 100% 0% 79% ;
+    }
+    .BadgesThree_body-content{
+        width: 90%;
+        height: 50%;
+        top: 145px;   
+        right: 0px; 
+        margin: 20px;
+        box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    }
+
+    
+    .ThreeOne_img{
+        position: absolute;
+        width: 25%;
+        z-index: 200;
+        left: 40%;
+        top: -14%;
+    }
+    .ThreeOne_background{
+        height: 25%;
+        position: absolute;
+        right: 0%;
+        bottom: 0%;
+        z-index:-1;
+        border-radius: 60px 0px 0px 0px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(176, 231, 176);
+
+    }
+    .BadgeTree_footer{
+        width: 60%;
+        height: 10%;
+        background-color: rgb(10, 117, 33);
+        z-index: 100;
+        position: absolute;
+        border-radius: 20px;
+        bottom: 5%;
+        left: 20%;
+        margin: 0%;
+    }
+    
+ 
+
+
+}

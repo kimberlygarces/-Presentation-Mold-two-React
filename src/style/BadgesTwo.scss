@@ -1,0 +1,102 @@
+@import "variables";
+
+@media (min-width: 600px) {
+    .BadgesTwo_body{
+        box-shadow: 1px -1px 5px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 1px -1px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 1px -1px 5px 0px rgba(0,0,0,0.75);
+        width: 1000px;
+        height: 550px;
+        margin: 10px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: honeydew;
+    }
+
+    .BadgesTwo_body-content{
+        text-align: center;
+    }
+    .BadgesTwo_body-title{
+        color: $colorSubTitle;
+        font-weight: bold;
+        font-size: 50px;
+        font-family: $fontTitle;
+    }
+    .BadgesTwo_body-subtitle{
+        font-weight: bold;
+        font-size: 30px;
+        font-family: $fontTitle;
+    }
+
+    .BadgesTwo_body-higher{
+        height: 120px;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        right: 0%;
+        border-radius: 100% 0% 88% 12% / 0% 22% 78% 100% ;
+        background: rgb(49,125,39);
+        background: radial-gradient(circle, rgba(49,125,39,1) 0%, rgba(30,187,23,1) 76%);
+    }
+    .BadgesTwo_body-lower{
+        height: 120px;
+        position: absolute;
+        left: 0%;
+        bottom: 0%;
+        right: 0%;
+        background: rgb(49,125,39);
+        background: radial-gradient(circle, rgba(49,125,39,1) 0%, rgba(30,187,23,1) 76%);
+        border-radius: 87% 13% 100% 0% / 78% 100% 0% 22%;
+
+    }
+    
+}
+@media (max-width: 600px) {
+    .BadgesTwo_body{
+        width: 100%;
+        height: 650px;
+        justify-content:center;
+        text-align:center;
+    }
+    .BadgesTwo_body-content{
+        padding-top: 80px;
+    }
+    .BadgesTwo_body-higher{
+        height: 120px;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        right: 0%;
+        border-radius: 100% 0% 88% 12% / 0% 22% 78% 100% ;
+        background: rgb(49,125,39);
+        background: radial-gradient(circle, rgba(49,125,39,1) 0%, rgba(30,187,23,1) 76%);
+    }
+    .BadgesTwo_body-lower{
+        height: 150px;
+        position: absolute;
+        left: 0%;
+        bottom: 0%;
+        right: 0%;
+        background: rgb(49,125,39);
+        background: radial-gradient(circle, rgba(49,125,39,1) 0%, rgba(30,187,23,1) 76%);
+        border-radius: 87% 13% 100% 0% / 78% 100% 0% 22%;
+
+    }
+
+    .BadgesTwo_body-content{
+        text-align: center;
+    }
+    .BadgesTwo_body-title{
+        color: $colorSubTitle;
+        font-weight: bold;
+        font-size: 30px;
+        font-family: $fontTitle;
+    }
+    .BadgesTwo_body-subtitle{
+        font-weight: bold;
+        font-size: 20px;
+        font-family: $fontTitle;
+    }
+}

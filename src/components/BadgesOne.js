@@ -1,5 +1,7 @@
 import React from 'react';
-import '../style/BadgesOne.css'
+// import '../style/BadgesOne.css'
+import '../style/BadgesOne.scss'
+
 import logo from '../img/logo.png'
 import pen from '../img/pen.png'
 import BadgeOneTitle from '../components/content/BadgeOneTitle'
@@ -14,16 +16,14 @@ class BadgesOne extends React.Component {
     }
         render(){        
         return(
-            <div className="BadgesOne_body">
+            <div className="Module_Body">
                 <div className="BadgesOne_body-title">
                     <img className="BadgesOne_body-img" src={logo} alt="Logo"></img>
                 </div>
            
                 <BadgeOneTitle BadgesOne={this.state}/>
-
                 <div className="BadgesOne_body-btn">
                       <Link  to="/pagesTwo"  className="btn btn-body" alt="">Empezar</Link>
-             
                 </div>
                 <div className="BadgesOne_body-figure-one"></div>
                 <div className="BadgesOne_body-figure-two"></div>

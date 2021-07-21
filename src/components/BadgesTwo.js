@@ -1,33 +1,28 @@
 import React from 'react';
-import '../style/BadgesTwo.css'
-import logo from '../img/logo.png'
-import pen from '../img/pen.png'
-import BadgeOneTitle from '../components/content/BadgeOneTitle'
+import '../style/BadgesTwo.scss'
+// import logo from '../img/logo.png'
+// import pen from '../img/pen.png'
+import BadgeTwoTitle from '../components/content/BadgeTwoTitle'
 import { Link } from 'react-router-dom';
 
-
-
-class BadgesOne extends React.Component {
+class BadgesTwo extends React.Component {
     state = {
-        title: 'Habilidades terapéuticas,', 
-        subtitle: ' narrativas, expresivas y reformativas',
+        title: 'Tema 1', 
+        subtitle: 'Habilidades terapéuticas de primer Orden',
     }
         render(){        
         return(
-            <div className="BadgesOne_body">
-                <div className="BadgesOne_body-title">
-                    <img className="BadgesOne_body-img" src={logo} alt="Logo"></img>
+            <div className="Module_Body">
+                <div className="BadgesTwo_body-content">
+                     <BadgeTwoTitle BadgesTwo={this.state}/>
                 </div>
-           
-                <BadgeOneTitle BadgesOne={this.state}/>
-
-                <div className="BadgesOne_body-btn">
-                      <Link  to="/pagesTwo"  className="btn btn-body" alt="">Empezar</Link>
-             
+                <div className="Badgestwo_body-btn">
+                    <Link  to="/one"  className="btn btn-body" alt="">  
+                        <i class="material-icons">arrow_forward</i>
+                    </Link>
                 </div>
-                <div className="BadgesOne_body-figure-one"></div>
-                <div className="BadgesOne_body-figure-two"></div>
-                <img className="BadgesOne_body-img-content" src={pen} alt="Logo"></img>
+                <div className="BadgesTwo_body-higher"></div>
+                <div className="BadgesTwo_body-lower"></div>
 
             </div>
 
@@ -35,4 +30,4 @@ class BadgesOne extends React.Component {
     }
 }
 
-export default BadgesOne;
+export default BadgesTwo;

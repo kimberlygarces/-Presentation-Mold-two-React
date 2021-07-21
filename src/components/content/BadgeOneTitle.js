@@ -1,12 +1,5 @@
 import React from 'react';
-
-
-
 class BadgesOneTitle extends React.Component {
-    state = {
-        title: 'Habilidades terapéuticas,', 
-        subtitle: ' narrativas, expresivas y reformativas',
-    }
         render(){        
         return(
             <div className="BadgesOne_body-content">

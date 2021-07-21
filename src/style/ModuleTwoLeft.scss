@@ -1,0 +1,23 @@
+@import "variables";
+
+.ModuleTwoLeft{
+    position: absolute;
+    z-index: 1;
+    background-color: rgb(236, 227, 214);
+    width: 80%;
+    height: 490px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-style: dashed solid;
+
+    .ModuleTwoLeftTitle{
+        background-color: green;
+        margin: 20px;
+        border-radius: 20px;
+
+        .ModuleTwo_Title{
+            font-family: $fontTitle;
+        }
+        
+    }
+}

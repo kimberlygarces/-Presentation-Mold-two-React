@@ -1,13 +1,11 @@
 import React from 'react';
-import BadgesTwo from '../components/BadgesTwo'
+import ThreeThree from '../components/ThreeThree'
 
 class BadgesNew extends React.Component {
     render(){
         return(
             <div className="center">
- 
-                <BadgesTwo/>
-          
+                <ThreeThree/>
             </div>
         )
     }

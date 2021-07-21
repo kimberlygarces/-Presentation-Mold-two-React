@@ -1,10 +1,10 @@
 import React from 'react';
-import Navbar from './Navbar'
+import BadgesThree from './BadgesThree'
 
 function Layout (props) {
     return(
     <React.Fragment>
-        <Navbar/>
+        <BadgesThree/>
         {props.children}
     </React.Fragment>
     )
