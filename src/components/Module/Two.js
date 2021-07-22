@@ -3,6 +3,7 @@ import '../../style/ModuleGeneral.scss'
 import '../../style/ModuleTwo.scss'
 import ModuleTwoTitle from '../content/ModuleTwo';
 import woman from '../../img/girl.jpg'
+import Componentaudio from '../audio/audio';
 
 // import ModuleOneContent from '../content/ModuleOneTContent'
 import book from '../../img/book.jpg'
@@ -11,19 +12,43 @@ import { Link } from 'react-router-dom';
 
 
 class ModuleTwo extends React.Component {
-    state = {
-        title: 'Dimensiones que operan en la lectura de contexto', 
-        TextOne: 'Dimensiones estructurales',
-        TextTwo: 'Dimensiones funcionales',
-        ContentLeftTop: 'Tienen que ver con los aspectos que intervienen en el desarrollo de un evento',
-        ContentRightTop: 'Tienen que ver con la manera en que las dimensiones estructurales afectan a las personas, familias o comunidades en particular',
-        ContentLeftBotton: 'Es importante que este nivel se revise antes de realizar cualquier ejercicio de intervención en el capo pero tambien que se vaya recostruyendo durante y después a la luz de los relatos e información recogida',
-        ContentRightBotton: 'Las dimensiones personales se entienden en relación con las dimensiones estructurales, es decir, se entienden en relación con su entorno',
-    }
+    constructor(props) {
+        super(props);
+        this.state = {
+            title: 'Dimensiones que operan en la lectura de contexto', 
+            TextOne: 'Dimensiones estructurales',
+            TextTwo: 'Dimensiones funcionales',
+            ContentLeftTop: 'Tienen que ver con los aspectos que intervienen en el desarrollo de un evento',
+            ContentRightTop: 'Tienen que ver con la manera en que las dimensiones estructurales afectan a las personas, familias o comunidades en particular',
+            ContentLeftBotton: 'Es importante que este nivel se revise antes de realizar cualquier ejercicio de intervención en el capo pero tambien que se vaya recostruyendo durante y después a la luz de los relatos e información recogida',
+            ContentRightBotton: 'Las dimensiones personales se entienden en relación con las dimensiones estructurales, es decir, se entienden en relación con su entorno',
+        }
+      }
+    
+      componentDidMount() {
+        this.timerID = setInterval(
+          () => this.tick(),
+          4000
+        );
+      }
+    
+
+    
+      tick() {
+        this.setState({
+            time: console.log('función time')
+        });
+      }
+      
+   
+  
+
+
         render(){ 
                    
         return(
             <div className="Module_Body">
+
                 <div className="ModuleTwo center-align">
                     <ModuleTwoTitle ModuleTwo={this.state}/>
                 </div>
@@ -51,6 +76,13 @@ class ModuleTwo extends React.Component {
                         <i className="large material-icons">fast_forward</i>
                     </Link>
                 </div>
+                <Componentaudio
+                    urls={[
+                        'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+                      ]}
+                />
+
+
             </div>
 
         )

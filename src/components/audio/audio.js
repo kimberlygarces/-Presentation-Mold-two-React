@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
+
 
 const useMultiAudio = urls => {
   const [sources] = useState(
@@ -14,7 +16,7 @@ const useMultiAudio = urls => {
     urls.map(url => {
       return {
         url,
-        playing: true
+        playing: false
       }
     }),
   )
@@ -65,6 +67,7 @@ const MultiPlayer = ({ urls }) => {
   const [players, toggle] = useMultiAudio(urls)
 
   return (
+    
     <div>
       {players.map((player, i) => (
         <Player key={i} player={player} toggle={toggle(i)} />
@@ -73,10 +76,18 @@ const MultiPlayer = ({ urls }) => {
   )
 }
 
+
+
 const Player = ({ player, toggle }) => (
   <div>
-    {/* <p>Stream URL: {player.url}</p> */}
-    <button onClick={toggle}>{player.playing ? 'Pause' : 'Play'}</button>
+    <Link className="btn-floating btn-large waves-effect waves-light red btn_volume" to="/ModuleTwo" 
+        onClick={toggle}>{player.playing ? 
+    (
+      <i className="large material-icons">volume_up</i>
+    )
+     : (
+      <i className="large material-icons">volume_off</i>
+    )}</Link>
   </div>
 )
 

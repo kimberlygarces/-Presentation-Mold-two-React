@@ -1,23 +1,174 @@
 @import "variables";
-
-.ModuleTwoLeft{
-    position: absolute;
-    z-index: 1;
-    background-color: rgb(236, 227, 214);
-    width: 80%;
-    height: 490px;
-    margin-left: 10%;
-    margin-right: 10%;
-    border-style: dashed solid;
-
-    .ModuleTwoLeftTitle{
-        background-color: green;
-        margin: 20px;
-        border-radius: 20px;
-
-        .ModuleTwo_Title{
-            font-family: $fontTitle;
-        }
+@media (min-width: 600px) {
+    .ModuleTwoLeft{
+        position: absolute;
+        z-index: 1;
+        background-color: rgb(236, 227, 214);
+        width: 80%;
+        height: 490px;
+        margin-left: 10%;
+        margin-right: 10%;
+        border-style: dashed solid;
         
+        .ModuleTwoLeft-woman{
+            width: 30%;
+            position: absolute;
+            right: 5%;
+            top: 5%;
+            z-index: -1;
+        }
+        .ModuleTwoLeftTitle{
+            background-color: orange;
+            margin-left: 10%;
+            border-radius: 20px;
+            width: 50%;
+    
+            .ModuleTwoLeft_Title{
+                font-family: $fontTitle;
+                margin-bottom: 0;
+                color: rgb(253, 253, 253);
+                font-size: 30px;
+                padding: 1%;
+            }
+            
+        }
+    
+        .ModuleTwoLeft-content{
+            display: flex;
+            position: absolute;
+            margin-left: 15%;
+            width: 40%;
+    
+            .textModule{
+                border-radius: 0px 0px 30px 30px;
+                width: 25%;
+                height: 150px;
+                margin-left: 4px;
+                position: relative;
+                &:hover{
+                    animation-name: pulse;
+                    animation-duration: 3s;
+            
+                }
+                
+            }
+
+            .textSub{
+                width: 95%;
+                height: 50%;
+                border-style: solid;
+                border-width: 9px;
+                border-radius: 50%;        
+                margin: 3%;
+                background-color: rgb(223, 225, 235);
+                box-shadow: 1px -1px 5px 0px rgba(0,0,0,0.75);
+                -webkit-box-shadow: 1px -1px 5px 0px rgba(0,0,0,0.75);
+                -moz-box-shadow: 1px -1px 5px 0px rgba(0,0,0,0.75);
+                position: absolute;
+                bottom: 1%;
+                transition: transform 0.5s linear;
+
+                &:hover{
+                    transform: scale(1.1);
+                    transition: transform 0.5s linear;
+            
+                }
+            }
+    
+            .A{
+                background-color: rgb(198, 189, 224);
+                .subA{
+                    border-color: rgb(198, 189, 224);;
+                }
+            }
+            .B{
+                background-color: rgb(173, 157, 221);
+                .subA{
+                    border-color: rgb(173, 157, 221);
+                }
+            }
+            .C{
+                background-color: rgb(157, 185, 221);
+                .subA{
+                    border-color: rgb(157, 185, 221);
+                }
+            }
+            .D{
+                background-color: rgb(157, 195, 221);
+                .subA{
+                    border-color: rgb(157, 195, 221);
+                }
+            }
+            .E{
+                background-color: rgb(221, 157, 205);
+                .subA{
+                    border-color: rgb(221, 157, 205);
+                }
+            }
+    
+        
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .ModuleTwoLeft{
+        position: absolute;
+        z-index: 1;
+        background-color: rgb(236, 227, 214);
+        width: 90%;
+        height: 92%;
+        margin-left: 5%;
+        margin-right: 5%;
+        border-style: dashed solid;
+        
+        .ModuleTwoLeft-woman{
+            width: 90px;
+            position: absolute;
+            left: 2%;
+            bottom: 2%;
+        }
+        .ModuleTwoLeftTitle{
+            background-color: orange;
+            border-radius: 20px;
+            width: 95%;
+            margin: 5px;
+    
+            .ModuleTwo_Title{
+                font-family: $fontTitle;
+            }
+            
+        }
+    
+        .ModuleTwoLeft-content{
+            display: flex;
+            position: absolute;
+            margin-left: 5%;
+    
+    
+            .textModule{
+                border-radius: 20px;
+                width: 70px;
+                height: 80px;
+                margin-left: 2px;
+                position: relative;
+                
+            }
+    
+            .A{
+                background-color: red;
+            }
+            .B{
+                background-color: red;
+            }
+            .C{
+                background-color: red;
+            }
+            .D{
+                background-color: red;
+            }
+    
+        
+        }
     }
 }
