@@ -36,6 +36,9 @@ class ModuleTwo extends React.Component {
                     {this.state.LeftContent ? 
                     (<div className="LeftContent">
                     <LeftContent/>
+                    <Link  to="/ModuleTwo" onClick={() => this.LeftContentClick()}  className="btn-floating btn-large waves-effect waves-light red btnLeftContent" >
+                        <i className="large material-icons">clear</i>
+                    </Link>
                     </div>
                     
                     )
@@ -93,8 +96,8 @@ class ModuleTwo extends React.Component {
                         <div className="TextRight ModuleContent">
                             {this.props.ModuleTwo.ContentRightBotton}
                         </div>
-                    <Link  to="/ModuleTwo" onClick={() => this.LeftClick()}  className="btn btn-next" alt="">  
-                        <i className="">Ver Detalles</i>
+                        <Link  to="/ModuleTwo" onClick={() => this.RightClick()}  className="btn btn" alt="">  
+                            <i className="">Ver Detalles</i>
                     </Link>
                     </div>
                     

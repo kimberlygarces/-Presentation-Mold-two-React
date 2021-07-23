@@ -24,8 +24,6 @@ class BadgesThree extends React.Component {
                         <i className="material-icons">arrow_back</i>
                     </Link>
                     <img className="ThreeOne_img" src={ThreeTwoImg} alt="Logo"></img>
-
-
             </div>
         </div>
 

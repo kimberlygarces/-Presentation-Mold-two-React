@@ -1,15 +1,14 @@
 import React from 'react';
-import woman from '../../img/user.png'
-import AContent from '../Module/contentTwoLeft/AContent';
-import BContent from '../Module/contentTwoLeft/BContent';
-import CContent from '../Module/contentTwoLeft/CContent';
-import DContent from '../Module/contentTwoLeft/DContent';
-import EContent from '../Module/contentTwoLeft/EContent';
 import { Link } from 'react-router-dom';
+import AContent from '../Module/contentThree/AContent';
+import BContent from '../Module/contentThree/BContent';
+import CContent from '../Module/contentThree/CContent';
+import DContent from '../Module/contentThree/DContent';
+import EContent from '../Module/contentThree/EContent';
+import FContent from '../Module/contentThree/FContent';
 
 
-
-class BadgesTwoTitle extends React.Component {
+class ThreeContent extends React.Component {
     constructor(props) {
         super(props);
         // INICIALIZAR ESTADO PARA EL MENSAJE DEL LADO IZQUIERDO
@@ -27,6 +26,10 @@ class BadgesTwoTitle extends React.Component {
 
         this.state = {EOn: false};
         this.EClick = this.EClick.bind(this);
+
+        
+        this.state = {FOn: false};
+        this.FClick = this.FClick.bind(this);
       }
 
  
@@ -37,7 +40,8 @@ class BadgesTwoTitle extends React.Component {
             BOn: false,
             COn: false,
             DOn: false,
-            EOn: false
+            EOn: false,
+            FOn: false
 
         }));
       }
@@ -47,7 +51,8 @@ class BadgesTwoTitle extends React.Component {
             AOn: false,
             COn: false,
             DOn: false,
-            EOn: false           
+            EOn: false,
+            FOn: false        
         }));
       }
       CClick() {
@@ -56,7 +61,8 @@ class BadgesTwoTitle extends React.Component {
             BOn: false,
             AOn: false,
             DOn: false,
-            EOn: false          
+            EOn: false,
+            FOn: false        
         }));
       }
       DClick() {
@@ -65,7 +71,8 @@ class BadgesTwoTitle extends React.Component {
             BOn: false,
             COn: false,
             AOn: false,
-            EOn: false          
+            EOn: false,
+            FOn: false        
         }));
       }
       EClick() {
@@ -74,18 +81,27 @@ class BadgesTwoTitle extends React.Component {
             BOn: false,
             COn: false,
             DOn: false,
-            AOn: false      
+            AOn: false,  
+            FOn: false
+        }));
+      }
+      FClick() {
+        this.setState(prevState => ({
+            FOn: !prevState.FOn,
+            BOn: false,
+            COn: false,
+            DOn: false,
+            AOn: false,
+            EOn: false     
         }));
       }
 
-    
-    
         render(){        
         return(
-         <div>
-                <span>
+            <div>
+                 <span>
                     {this.state.AOn ? 
-                    (<div className="AContent">
+                    (<div className="BContent">
                     <AContent/>
                     </div>
                     )
@@ -96,7 +112,7 @@ class BadgesTwoTitle extends React.Component {
 
                 <span>
                     {this.state.BOn ? 
-                    (<div className="AContent">
+                    (<div className="BContent">
                     <BContent/>
                     </div>
                     )   
@@ -106,7 +122,7 @@ class BadgesTwoTitle extends React.Component {
                 </span>
                 <span>
                     {this.state.COn ? 
-                    (<div className="AContent">
+                    (<div className="BContent">
                     <CContent/>
                     </div>
                     )   
@@ -116,7 +132,7 @@ class BadgesTwoTitle extends React.Component {
                 </span>
                 <span>
                     {this.state.DOn ? 
-                    (<div className="AContent">
+                    (<div className="BContent">
                     <DContent/>
                     </div>
                     
@@ -127,7 +143,7 @@ class BadgesTwoTitle extends React.Component {
                 </span>
                 <span>
                     {this.state.EOn ? 
-                    (<div className="AContent">
+                    (<div className="BContent">
                     <EContent/>
                     </div>
                     
@@ -136,68 +152,73 @@ class BadgesTwoTitle extends React.Component {
                     ''
                     }
                 </span>
-            <div className="ModuleTwoLeftTitle TitleTwo">
-                <h2 className="ModuleTwoLeft_Title">{this.props.ModuleLeft.title}</h2>
+                <span>
+                    {this.state.FOn ? 
+                    (<div className="BContent">
+                    <FContent/>
+                    </div>
+                    
+                    )   
+                    : 
+                    ''
+                    }
+                </span>
+            <div className="Modulethree-title">
+                <h2 className="Modulethree-title_text">{this.props.Content.title}</h2>
             </div>
-            <img className="ModuleTwoLeft-woman" src={woman} alt="Logo"></img>
-            <div className="ModuleTwoLeft-content">
+            <div className="btnText_ModuleThree">
             <div className="textModule A">
-                <div className="textSub subA">
-                <Link to="/ModuleTwo"
+                <Link to="/ModuleTree"
                         onClick={() => this.AClick()}>
                         <h2 className="textA">
-                            A
+                            1
                         </h2>
                 </Link>
-                </div>            
             </div>
             <div className="textModule B">
-                <div className="textSub subA">
-                <Link to="/ModuleTwo"
+                <Link to="/ModuleTree"
                         onClick={() => this.BClick()}>
                         <h2 className="textA">
-                            B
+                            2
                         </h2>
                 </Link>
-                </div>     
             </div>
             <div className="textModule C">
-                <div className="textSub subA">
-                <Link to="/ModuleTwo"
+                <Link to="/ModuleTree"
                         onClick={() => this.CClick()}>
                         <h2 className="textA">
-                            C
+                            3
                         </h2>
                 </Link>
-                </div> 
             </div>
             <div className="textModule D">
-                <div className="textSub subA">
-                <Link to="/ModuleTwo"
+                <Link to="/ModuleTree"
                         onClick={() => this.DClick()}>
                         <h2 className="textA">
-                            D
+                            4
                         </h2>
                 </Link>
-                </div> 
             </div>
             <div className="textModule E">
-                <div className="textSub subA">
-                <Link to="/ModuleTwo"
+                <Link to="/ModuleTree"
                         onClick={() => this.EClick()}>
                         <h2 className="textA">
-                            E
+                            5
                         </h2>
                 </Link>
-                </div> 
+            </div>
+            <div className="textModule F">
+                <Link to="/ModuleTree"
+                        onClick={() => this.FClick()}>
+                        <h2 className="textA">
+                            6
+                        </h2>
+                </Link>
             </div>
             </div>
-         
-        
-         </div>
-
+            </div>
         )
     }
 }
 
-export default BadgesTwoTitle;
+export default ThreeContent;

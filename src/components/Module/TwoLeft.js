@@ -3,9 +3,6 @@ import '../../style/ModuleGeneral.scss'
 import '../../style/ModuleTwoLeft.scss'
 import ModuleLeftContent from '../content/ModuleTwoLeft';
 import Componentaudio from '../audio/audio';
-
-
-
 class ModuleLeft extends React.Component {
     state = {
         title: 'DIMENSIONES ESTRUCTURALES', 
